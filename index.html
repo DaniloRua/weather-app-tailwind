@@ -13,28 +13,24 @@
 
 <body>
     
-     <div class="bg-blue-300 h-screen h-screen w-screen z-0 fixed flex justify-center">
+     <div class="bg-blue-300 h-screen h-screen w-screen outline-none fixed flex justify-center">
     
-    <img src="./assets/sun-mark-svgrepo-com.svg" class=" w-20 m-10 animate-bounce h-16 z-0" alt="sun" srcset="">
+        <!-- <img src="./assets/sun-mark-svgrepo-com.svg" class=" w-20 m-10 animate-bounce h-16 z-0" alt="sun" srcset=""> -->
     
-        <div class="fixed justify-center z-1 py-10">
+        <div class=" container shadow-xl rounded-2xl m-10 py-1 h-fit w-2/3">
 
-            <div class="backdrop-blur-md p-6 flex-col  opacity-90 rounded-3xl mt-12  shadow-lg ">
-                
-                <input type="text" id="city_name" placeholder="City name" autocomplete="" class="flex bg-blue-300 p-5 text-xl font-bold uppercase border-none focus:border-none outline-none">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded h-10 " autofocus onclick="setCity()">
-                    Submit
-                  </button>
-                <div class="mb-4 text-2xl font-medium text-center">
-                    <span id="city">Loading...</span>, <span id="country">Loading...</span>
-                </div>
-                <div class="mb-4 text-xl text-center">
-                    <span id="temperature">Loading...</span>°C
-                </div>
-                <div class="mb-4 text-lg text-center">
-                    <span id="average">Loading...</span>°C
-                </div>
-               
+            <div class="text-white text-opacity-60 backdrop-blur-md">
+            
+                <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="Enter City name" autocomplete="" required class="flex bg-blue-300 p-5 text-xl font-bold uppercase border-none focus:border-none outline-none" oninvalid="this.setCustomValidity('Enter city Name')"
+                oninput="this.setCustomValidity('')"
+            >
+            </div>
+
+            <div class="flex flex-col text-white text-opacity-80 font-medium text-center">
+
+                    <span id="city" class="text-2xl">Loading...</span><span id="country" class="text-2xl">Loading...</span>
+                <br>
+                    <span id="temperature">Loading...</span>°C<span id="average" class="text-lg">Loading...</span>°C
             </div>
         </div>
 
