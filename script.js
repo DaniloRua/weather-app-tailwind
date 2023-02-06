@@ -21,6 +21,11 @@ function fetchCityName(e){
     let countryName = data[0].country;
     let cityName = data[0].name;
     
+  //   const otherInfo = fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m_max`)
+  // .then((response)=> response.json())
+  // .then((data) => console.log(data))
+
+
     const fetchWeather = fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
   .then((response)=> response.json())
  .then(data => {console.log(data)
@@ -31,9 +36,7 @@ let sum = 0;
 for (let number of arr) {
     sum += number;
 }
-
 averageTemp = sum /arr.length;
-console.log(averageTemp)
 
 average.innerHTML="AVERAGE TEMPERATURE: " + parseInt(averageTemp)
 temperature.innerHTML = curremtTemp
