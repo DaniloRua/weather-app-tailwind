@@ -7,8 +7,9 @@ const city = document.getElementById('city-name')
 let date = new Date();
 let currentHour = date.toTimeString().slice(0,2)
 console.log(currentHour)
+
 city.addEventListener("keyup", function(e){
- if(e.code === 'Enter'){
+ if(e.code === 'Enter'|| "13"){
     setCity();
  }
 })
