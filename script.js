@@ -4,6 +4,9 @@ const cityPlacement = document.getElementById('city');
 const country = document.getElementById('country');
 const average = document.getElementById('average');
 const city = document.getElementById('city-name')
+let date = new Date();
+let currentHour = date.toTimeString().slice(0,2)
+console.log(currentHour)
 city.addEventListener("keyup", function(e){
  if(e.code === 'Enter'){
     setCity();
@@ -30,7 +33,7 @@ function fetchCityName(e) {
         .then(data => {
           console.log(data)
 
-          const curremtTemp = data.hourly.temperature_2m[0];
+          const curremtTemp = data.hourly.temperature_2m[`${+currentHour}`];
           const arr = data.hourly.temperature_2m;
           let sum = 0;
           for (let number of arr) {
@@ -38,8 +41,8 @@ function fetchCityName(e) {
           }
           averageTemp = sum / arr.length;
 
-          average.innerHTML = "AVERAGE TEMPERATURE: " + parseInt(averageTemp)
-          temperature.innerHTML = curremtTemp
+          average.innerHTML = "AVERAGE: " + parseInt(averageTemp) + "°C"
+          temperature.innerHTML = curremtTemp + "°C"
           cityPlacement.innerHTML = cityName
           country.innerHTML = countryName
         })

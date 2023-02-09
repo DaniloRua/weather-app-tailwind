@@ -21,16 +21,14 @@
 
             <div class="text-white text-opacity-60 backdrop-blur-md">
             
-                <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="Enter City name" autocomplete="" required class="flex bg-blue-300 p-5 text-xl font-bold uppercase border-none focus:border-none outline-none" oninvalid="this.setCustomValidity('Enter city Name')"
-                oninput="this.setCustomValidity('')"
-            >
+                <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="Enter City name" autocomplete="" required class="flex bg-blue-300 p-5 text-xl font-bold uppercase border-none focus:border-none outline-none">
             </div>
 
             <div class="flex flex-col text-white text-opacity-80 font-medium text-center">
 
-                    <span id="city" class="text-2xl">Loading...</span><span id="country" class="text-2xl">Loading...</span>
+                    <span id="city" class="text-2xl">City</span><span id="country" class="text-2xl">Country</span>
                 <br>
-                    <span id="temperature">Loading...</span>°C<span id="average" class="text-lg">Loading...</span>°C
+                    <span id="temperature" class="text-2xl">--</span><span id="average" class="text-sm">--</span>
             </div>
         </div>
 
