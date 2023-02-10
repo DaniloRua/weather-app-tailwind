@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +9,7 @@
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>Weather app tailwind</title>
 </head>
-
 <body>
-    
      <div class="bg-blue-300 h-screen h-screen w-screen outline-none fixed flex justify-center">
     
         <!-- <img src="./assets/sun-mark-svgrepo-com.svg" class=" w-20 m-10 animate-bounce h-16 z-0" alt="sun" srcset=""> -->
@@ -20,64 +17,53 @@
         <div id="container"
         class=" container flex flex-col justify-between shadow-lg backdrop-blur-2xl rounded-2xl m-10 h-2/3 w-1/2">
             <div>
-                
                 <div id="search-input" class="text-white text-opacity-80">
-                    <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="Enter City name" autocomplete="" required class="bg-blue-300 w-full rounded-2xl p-5 text-xl font-bold uppercase border-none outline-none placeholder-blue-100">
+                    <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="             Enter City name" autocomplete="" required class="bg-blue-300 w-full rounded-2xl p-5 text-xl font-bold uppercase border-none outline-none placeholder-blue-100">
                 </div>
-
-                <div id="city-country-output" class="container flex-col h-full justify-between text-white text-opacity-80 font-medium text-center border-2">
+                <div id="city-country-output" class="container flex-col h-full justify-between text-white text-opacity-80 font-medium text-center">
 
                     <div class="mt-3">
                         <p id="city" class="text-2xl">City</p>
                         <p id="country" class="text-2xl">Country</p>
-                        
                     </div>
                     <br>            
                     <div class="py-3">
                         <p id="temperature" class="text-3xl">--</p>
                         <br>
                         <span id="average" class="text-sm">--</span>
-
                     </div>
-
                 </div>
             </div>
-
-            <div id="next-days" class=" block p-4 border-2 h-fit flex-wrap">
-
+            <div id="next-days" class=" block p-4 h-fit flex-wrap">
                 <div class="text-center justify-between items-center flex text-white opacity-90">
-                 
                     <div class="text-center mb-0 flex items-center justify-center flex-col">
-                        <span class="block my-1">day</span>
+                        <span id="next-weekday-1" class="block my-1">day</span>
                         <img src="./assets/clouds-svgrepo-com.svg" class="block w-8 h-8">
-                        <span class="block my-1">--&deg;</span>
+                        <span id="next-day-1" class="block my-1">--&deg;</span>
                     </div>
                     <div class="text-center mb-0 flex items-center justify-center flex-col">
-                        <span class="block my-1">day</span>
+                        <span id="next-weekday-2" class="block my-1">day</span>
                         <img src="./assets/moon-svgrepo-com.svg" class="block w-8 h-8">
-                        <span class="block my-1">--&deg;</span>
+                        <span id="next-day-2" class="block my-1">--&deg;</span>
                     </div>
                     <div class="text-center mb-0 flex items-center justify-center flex-col">
-                        <span class="block my-1">day</span>
+                        <span id="next-weekday-3" class="block my-1">day</span>
                         <img src="./assets/rain-svgrepo-com.svg" class="block w-8 h-8">
-                        <span class="block my-1">--&deg;</span>
+                        <span id="next-day-3" class="block my-1">--&deg;</span>
                     </div>
                     <div class="text-center mb-0 flex items-center justify-center flex-col">
-                        <span class="block my-1">day</span>
+                        <span id="next-weekday-4" class="block my-1">day</span>
                         <img src="./assets/sun-mark-svgrepo-com.svg" class="block w-8 h-8">
-                        <span class="block my-1">--&deg;</span>
+                        <span id="next-day-4" class="block my-1">--&deg;</span>
                     </div>
                     <div class="text-center mb-0 flex items-center justify-center flex-col">
-                        <span class="block my-1">day</span>
+                        <span id="next-weekday-5" class="block my-1">day</span>
                         <img src="./assets/sun-mark-svgrepo-com.svg" class="block w-8 h-8">
-                        <span class="block my-1">--&deg;</span>
+                        <span id="next-day-5" class="block my-1">--&deg;</span>
                     </div>
                 </div>
             </div>
-        </div>
-
-       
+        </div>       
     <script src="script.js"></script>
 </body>
-
 </html>
