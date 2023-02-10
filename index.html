@@ -10,15 +10,15 @@
     <title>Weather app tailwind</title>
 </head>
 <body>
-     <div class="bg-blue-300 h-screen h-screen w-screen outline-none fixed flex justify-center">
+     <div class=" flex bg-blue-300 h-screen h-screen w-screen outline-none z-0 justify-center">
     
-        <!-- <img src="./assets/sun-mark-svgrepo-com.svg" class=" w-20 m-10 animate-bounce h-16 z-0" alt="sun" srcset=""> -->
+        <!-- <img src="./assets/sun-mark-svgrepo-com.svg" class=" w-20 m-10 animate-bounce h-16 z-1" alt="sun" srcset=""> -->
     <!-- make responsive -->
         <div id="container"
-        class=" container flex flex-col justify-between shadow-lg backdrop-blur-2xl rounded-2xl m-10 h-2/3 w-1/2">
+        class=" z-5 container flex flex-col justify-between shadow-lg backdrop-blur-2xl rounded-2xl m-10 h-2/3 w-1/3 w-full sm:w-4/5 h-2/3 md:w-3/5 lg:w-2/5 xl:w-1/3 ">
             <div>
                 <div id="search-input" class="text-white text-opacity-80">
-                    <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="             Enter City name" autocomplete="" required class="bg-blue-300 w-full rounded-2xl p-5 text-xl font-bold uppercase border-none outline-none placeholder-blue-100">
+                    <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="  Enter City name" autocomplete="" required class="bg-blue-300 w-full rounded-2xl p-5 text-xl font-bold uppercase border-none outline-none placeholder-blue-100">
                 </div>
                 <div id="city-country-output" class="container flex-col h-full justify-between text-white text-opacity-80 font-medium text-center">
 

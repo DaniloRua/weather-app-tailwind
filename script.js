@@ -11,28 +11,26 @@ const nextDay4 = document.getElementById('next-day-4');
 const nextDay5 = document.getElementById('next-day-5');
 
 let date = new Date();
-let currentHour = date.toTimeString().slice(0,2);
+let currentHour = date.toTimeString().slice(0, 2);
 
-function sumArray (i){
+function sumArray(i) {
   sum = 0;
-  i.forEach( val => {
-   sum += val;
-});
-return sum;
+  i.forEach(val => {
+    sum += val;
+  });
+  return sum;
 }
 
-city.addEventListener("keyup", function(e){
- if(e.code === 'Enter'){
+city.addEventListener("keydown", function (e) {
+  if (e.code === 'Enter' || e.code === '13') {
     setCity();
- }})
-
+  }
+})
 
 function setCity() {
-
   fetchCityName(city.value)
 }
 function fetchCityName(e) {
-
   fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${e}&limit=5&appid=${API_KEY}`)
     .then((response) => response.json())
     .then((data) => {
@@ -44,7 +42,7 @@ function fetchCityName(e) {
       const fetchWeather = fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
         .then((response) => response.json())
         .then(data => {
-          console.log(data)  
+          console.log(data)
           const curremtTemp = data.hourly.temperature_2m[`${+currentHour}`];
           const temperatures = data.hourly.temperature_2m;
 
@@ -61,8 +59,6 @@ function fetchCityName(e) {
           averageNextDay3 = sumArray(tempNextDay3) / tempNextDay3.length;
           averageNextDay4 = sumArray(tempNextDay4) / tempNextDay4.length;
           averageNextDay5 = sumArray(tempNextDay5) / tempNextDay5.length;
-
-
 
           average.innerHTML = "AVERAGE: " + parseInt(averageTemp) + "°C";
           temperature.innerHTML = curremtTemp + "°C";
