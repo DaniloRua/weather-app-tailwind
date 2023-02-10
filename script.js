@@ -6,7 +6,6 @@ const average = document.getElementById('average');
 const city = document.getElementById('city-name')
 let date = new Date();
 let currentHour = date.toTimeString().slice(0,2)
-console.log(currentHour)
 
 city.addEventListener("keyup", function(e){
  if(e.code === 'Enter'|| "13"){
@@ -27,13 +26,11 @@ function fetchCityName(e) {
       let latitude = data[0].lat;
       let longitude = data[0].lon;
       let countryName = data[0].country;
-      let cityName = data[0].name;
-
+      let cityName = data[0].name
       const fetchWeather = fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
         .then((response) => response.json())
         .then(data => {
           console.log(data)
-
           const curremtTemp = data.hourly.temperature_2m[`${+currentHour}`];
           const arr = data.hourly.temperature_2m;
           let sum = 0;
@@ -41,17 +38,15 @@ function fetchCityName(e) {
             sum += number;
           }
           averageTemp = sum / arr.length;
-
-          average.innerHTML = "AVERAGE: " + parseInt(averageTemp) + "°C"
-          temperature.innerHTML = curremtTemp + "°C"
-          cityPlacement.innerHTML = cityName
-          country.innerHTML = countryName
+          average.innerHTML = "AVERAGE: " + parseInt(averageTemp) + "°C";
+          temperature.innerHTML = curremtTemp + "°C";
+          cityPlacement.innerHTML = cityName;
+          country.innerHTML = countryName;
         })
         .catch((error) => console.log(error));
-
     })
-    .catch((error) => console.log(error))
-}
+    .catch((error) => console.log(error));
+};
 
 
 
