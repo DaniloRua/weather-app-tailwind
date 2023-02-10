@@ -1,5 +1,5 @@
 const API_KEY = `3b2cfc2c634fd33d5f046d2a97118c96`;
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat","Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 let date = new Date();
 let currentHour = date.toTimeString().slice(0, 2);
 
