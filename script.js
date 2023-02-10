@@ -1,4 +1,8 @@
 const API_KEY = `3b2cfc2c634fd33d5f046d2a97118c96`;
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let date = new Date();
+let currentHour = date.toTimeString().slice(0, 2);
+
 const temperature = document.getElementById('temperature');
 const cityPlacement = document.getElementById('city');
 const country = document.getElementById('country');
@@ -10,8 +14,14 @@ const nextDay3 = document.getElementById('next-day-3');
 const nextDay4 = document.getElementById('next-day-4');
 const nextDay5 = document.getElementById('next-day-5');
 
-let date = new Date();
-let currentHour = date.toTimeString().slice(0, 2);
+let  weekDay1 = document.getElementById('next-weekday-1').innerHTML=weekday[date.getDay()+ 1]
+let  weekDay2 = document.getElementById('next-weekday-2').innerHTML=weekday[date.getDay()+ 2]
+let  weekDay3 = document.getElementById('next-weekday-3').innerHTML=weekday[date.getDay()+ 3]
+let  weekDay4 = document.getElementById('next-weekday-4').innerHTML=weekday[date.getDay()+ 4]
+let  weekDay5 = document.getElementById('next-weekday-5').innerHTML=weekday[date.getDay()+ 5] 
+
+
+
 
 function sumArray(i) {
   sum = 0;
@@ -22,13 +32,15 @@ function sumArray(i) {
 }
 
 city.addEventListener("keydown", function (e) {
+
   if (e.code === 'Enter' || e.code === '13') {
-    setCity();
-  }
-})
+    setCity()
+  }}
+)
 
 function setCity() {
   fetchCityName(city.value)
+  city.value = '';
 }
 function fetchCityName(e) {
   fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${e}&limit=5&appid=${API_KEY}`)
