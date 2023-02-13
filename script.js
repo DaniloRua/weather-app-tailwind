@@ -1,5 +1,12 @@
-const API_KEY = `YOUR API KEY`;
-const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const key = document.getElementById('api-key-input');
+let API_KEY = '';
+function insertApiKey(){
+  API_KEY = key.value
+  console.log(key.value)
+
+}
+ // for test app
+const weekday = ["Sun-", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let date = new Date();
 let currentHour = date.toTimeString().slice(0, 2);
 const temperature = document.getElementById('temperature');
