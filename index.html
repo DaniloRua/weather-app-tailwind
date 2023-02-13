@@ -19,14 +19,14 @@
     <div class=" flex bg-blue-300 h-screen h-screen w-screen outline-none justify-center">
 
         <div id="container"
-            class="container fixed z-20 flex flex-col justify-between shadow-lg opacity-90 rounded-2xl m-10 h-2/3 w-1/3 w-full  sm:w-4/5 h-2/3 m-10 md:w-3/5 lg:w-2/5 xl:w-1/3 ">
+            class="container px-2 fixed z-20 flex flex-col justify-between shadow-lg opacity-90 rounded-2xl m-10 h-2/3 w-1/3 w-full  sm:w-4/5 h-2/3  md:w-3/5 lg:w-2/5 xl:w-1/3 ">
             <div>
                 <div name="city-input" class="text-white text-opacity-80 flex justify-between m-5">
                     <input type="text" id="city-name" autofocus aria-autocomplete="list" placeholder="City Name"
                         required
                         class="bg-blue-300 w-2/3 rounded-2xl p-5 text-lg font-bold border-none outline-none placeholder-blue-100 shadow-sm ">
 
-                    <button
+                    <button autofocus
                         class="bg-blue-300 hover:bg-blue-400 text-white text-xl font-bold py-5 px-5 rounded-2xl shadow-lg max-w-fit  sm:hover:bg-blue-400"
                         onclick="setCity()">
                         Search
@@ -77,8 +77,8 @@
                 </div>
                 <!-- just to test -->
                 <input class="mt-10" placeholder="insert apiKey" type="text" id="api-key-input">
-                <button onclick="insertApiKey()" class="border-2
-                ">Set KEY</button>
+                <button onclick="insertApiKey()" class="border-2 px-5
+                ">Set</button>
             </div>
         </div>
         <script src="script.js"></script>
