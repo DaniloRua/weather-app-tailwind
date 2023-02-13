@@ -1,9 +1,8 @@
-const key = document.getElementById('api-key-input');
+let key = document.getElementById('api-key-input');
 let API_KEY = '';
 function insertApiKey(){
-  API_KEY = key.value
-  console.log(key.value)
-
+  API_KEY = key.value;
+  key.value = ''
 }
  // for test app
 const weekday = ["Sun-", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
